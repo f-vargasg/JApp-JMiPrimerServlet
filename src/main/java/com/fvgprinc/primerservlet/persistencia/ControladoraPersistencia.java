@@ -1,7 +1,10 @@
 package com.fvgprinc.primerservlet.persistencia;
 
 import com.fvgprinc.primerservlet.logica.Usuario;
+import com.fvgprinc.primerservlet.persistencia.exceptions.NonexistentEntityException;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -18,5 +21,13 @@ public class ControladoraPersistencia {
     // Operacion READ
     public List<Usuario> traerUsuarios() {
         return usuJpa.findUsuarioEntities();
+    }
+
+    public void borrarUsuario(int id_eliminar) {
+        try {
+            usuJpa.destroy(id_eliminar);
+        } catch (NonexistentEntityException ex) {
+            Logger.getLogger(ControladoraPersistencia.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 }

@@ -98,10 +98,6 @@ public class SvUsuarios extends HttpServlet {
         usu.setTelefono(telefono);
         control.crearUsuario(usu);
         response.sendRedirect("index.jsp");
-        /*System.out.println("dni: " + dni);
-        System.out.println("Nombre: " + nombre);
-        System.out.println("apellido: " + apellido);
-        System.out.println("telefono: " + telefono);*/
 
     }
 
