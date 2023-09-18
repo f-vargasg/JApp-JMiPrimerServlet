@@ -20,7 +20,7 @@
             <p><label>Telefono:</label><input type="text" name="telefono"/></p>
             <button type="submit">Enviar</button>
         </form>
-        
+
         <h1>Ver lista de usuarios</h1>
         <p>Para ver los datos de los usuarios haga click en el siguiente botón</p>
         <form action="SvUsuarios" method="GET">
@@ -33,6 +33,13 @@
             <p><label>Id:</label><input type="text" name="id_usuario"/></p>            
             <button type="submit">Eliminar Usuario</button>
         </form>        
-        
+
+        <h1>Editar Usuario</h1>
+        <p>Ingrese el id del usuario que quiere eliminar </p>
+        <form action="SvEditar" method="GET">
+            <p><label>Id:</label><input type="text" name="id_usuarioEdit"/></p>            
+            <button type="submit">Editar Usuario</button>
+        </form>        
+
     </body>
 </html>
